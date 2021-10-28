@@ -1,35 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
-public class PlayerMover : MonoBehaviour
+public class PlayerMover : APlayer
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
-    private Waypoint _currentWaypoint;
-    private DataSceneStorage _dataSceneStorage;
 
+    private Waypoint _currentWaypoint;
     private IEnumerator _moveWaypointCoroutine;
+
+    private DataSceneStorage _dataSceneStorage;
 
     private void Start()
     {
         _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
-        
-        _currentWaypoint = _dataSceneStorage.FirstWaypoint;
 
-        foreach (var waypoint in _dataSceneStorage.WaypointsOnScene)
-        {
-            waypoint.AllEnemiesDied += OnAllEnemiesDied;
-        }
+        _currentWaypoint = _dataSceneStorage.FirstWaypoint;
         
+        foreach (var waypoint in _dataSceneStorage.AllWaypointsOnScene)
+        {
+                waypoint.AllEnemiesDied += OnAllEnemiesDied;
+        }
+
         _moveWaypointCoroutine = MoveToWaypoint();
         StartCoroutine(_moveWaypointCoroutine);
     }
 
     private void OnDisable()
     {
-        _currentWaypoint.AllEnemiesDied -= OnAllEnemiesDied;
     }
 
     private IEnumerator MoveToWaypoint()
@@ -53,8 +51,9 @@ public class PlayerMover : MonoBehaviour
 
     private void OnAllEnemiesDied()
     {
+        _currentWaypoint.AllEnemiesDied -= OnAllEnemiesDied;
         _currentWaypoint = _dataSceneStorage.NextWaypoint;
-        
+
         if (_moveWaypointCoroutine != null)
         {
             StopCoroutine(_moveWaypointCoroutine);

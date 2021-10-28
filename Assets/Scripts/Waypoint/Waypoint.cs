@@ -6,16 +6,16 @@ using Random = UnityEngine.Random;
 public class Waypoint : MonoBehaviour
 {
     private SpawnPoint[] _spawnPoints;
-    private List<Enemy> _enemies;
+    private List<AEnemy> _enemies;
     private DataSceneStorage _dataSceneStorage;
 
     public event Action AllEnemiesDied;
 
     private void Awake()
     {
-        _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
         _spawnPoints = GetComponentsInChildren<SpawnPoint>();
-        _enemies = new List<Enemy>();
+        _enemies = new List<AEnemy>();
+        _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
     }
 
     private void Start()
@@ -23,7 +23,7 @@ public class Waypoint : MonoBehaviour
         SpawnEnemies();
     }
 
-    private void OnEnemyDied(Enemy enemy)
+    private void OnEnemyDied(AEnemy enemy)
     {
         enemy.Died -= OnEnemyDied;
         _enemies.Remove(enemy);

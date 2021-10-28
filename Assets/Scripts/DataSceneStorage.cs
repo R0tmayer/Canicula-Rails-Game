@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class DataSceneStorage : MonoBehaviour
 {
-    [SerializeField] private Enemy[] _pull;
-    [SerializeField] private Waypoint[] _waypointsOnScene;
+    [SerializeField] private AEnemy[] _pull;
+    [SerializeField] private Waypoint[] _waypoints;
     private int _index;
 
-    public Enemy[] Pull
+    public AEnemy[] Pull
     {
         get => _pull;
     }
@@ -20,23 +20,22 @@ public class DataSceneStorage : MonoBehaviour
 
             try
             {
-                return _waypointsOnScene[_index];
+                return _waypoints[_index];
             }
-            catch (Exception e)
+            catch (IndexOutOfRangeException)
             {
-                Debug.Log(e);
-                throw;
+                throw new IndexOutOfRangeException();
             }
         }
     }
 
     public Waypoint FirstWaypoint
     {
-        get => _waypointsOnScene[0];
+        get => _waypoints[0];
     }
 
-    public Waypoint[] WaypointsOnScene
+    public Waypoint[] AllWaypointsOnScene
     {
-        get => _waypointsOnScene;
+        get => _waypoints;
     }
 }
