@@ -2,11 +2,13 @@
 
 public class PlayerShooter : APlayer
 {
-    [SerializeField] private int _damage = 10;
+    private float _damage;
     private Camera _camera;
 
-    private void Awake()
+    private void Start()
     {
+        base.Start();
+        _damage = currentDifficult.PlayerDamage;
         _camera = Camera.main;
     }
 
@@ -17,7 +19,12 @@ public class PlayerShooter : APlayer
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             const int rayLength = 10000;
 
-            if (Physics.Raycast(ray, out RaycastHit hit, rayLength))
+            int meleeLayerIndex = LayerMask.NameToLayer("Melee");
+            int rangeLayerIndex = LayerMask.NameToLayer("Range");
+            
+            int layerMask = (1 << meleeLayerIndex) | (1 << rangeLayerIndex);
+            
+            if (Physics.Raycast(ray, out RaycastHit hit, rayLength, layerMask ))
             {
                 if (hit.collider.TryGetComponent(out IDamagable hitObject))
                 {

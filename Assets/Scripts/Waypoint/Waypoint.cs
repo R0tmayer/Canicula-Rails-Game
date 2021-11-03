@@ -43,9 +43,8 @@ public class Waypoint : MonoBehaviour
         {
             var randomEnemyIndex = Random.Range(0, _dataSceneStorage.Pull.Length);
             var spawned = Instantiate(_dataSceneStorage.Pull[randomEnemyIndex],
-                _spawnPoints[i].transform.position,
-                Quaternion.identity,
-                _spawnPoints[i].transform.parent);
+                _spawnPoints[i].transform.position + Vector3.down,
+                Quaternion.identity);
 
             spawned.Died += OnEnemyDied;
             spawned.gameObject.SetActive(false);

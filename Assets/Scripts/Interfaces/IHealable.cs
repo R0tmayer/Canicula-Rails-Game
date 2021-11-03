@@ -1,6 +1,6 @@
 ﻿public interface IHealable
 {
-    void Heal(int healValue);
+    void Heal(float healValue);
 }
 
 

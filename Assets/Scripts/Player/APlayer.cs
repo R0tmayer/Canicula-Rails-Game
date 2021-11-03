@@ -2,15 +2,27 @@
 
 public abstract class APlayer : MonoBehaviour, IHealable, IDamagable
 {
-    [SerializeField] private int _maxHealth;
-    private int _health;
+    private GameDifficult _gameDifficultInstance;
+    protected GameSettingsSO currentDifficult;
+    
+    private float _maxHealth;
+    private float _health;
 
-    private void Awake()
+    protected void Start()
     {
+        _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        currentDifficult = _gameDifficultInstance.CurrentDifficult;
+        
+        _maxHealth = currentDifficult.PlayerMaxHealth;
         _health = _maxHealth;
     }
 
-    public void Heal(int value)
+    private void Die()
+    {
+        Debug.LogError("YOU DIED! PLAYER HP IS " + _health );
+    }
+
+    public void Heal(float value)
     {
         _health += value;
 
@@ -20,7 +32,7 @@ public abstract class APlayer : MonoBehaviour, IHealable, IDamagable
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         _health -= damage;
 
@@ -28,10 +40,5 @@ public abstract class APlayer : MonoBehaviour, IHealable, IDamagable
         {
             Die();
         }
-    }
-    
-    private void Die()
-    {
-        Debug.LogError("YOU DIED! PLAYER HP IS " + _health );
     }
 }

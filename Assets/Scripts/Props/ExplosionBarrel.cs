@@ -2,8 +2,22 @@
 
 public class ExplosionBarrel : MonoBehaviour, IDamagable
 {
-    [SerializeField] private int _explosionRadius;
-    [SerializeField] private int _health;
+    private GameDifficult _gameDifficultInstance;
+    private GameSettingsSO _currentDifficult;
+    
+    private float _health;
+    private float _explosionRadius;
+    private float _damage;
+
+    private void Start()
+    {
+        _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        _currentDifficult = _gameDifficultInstance.CurrentDifficult;
+        
+        _health = _currentDifficult.BarrelMaxHealth;
+        _explosionRadius = _currentDifficult.BarrelRadius;
+        _damage = _currentDifficult.BarrelDamage;
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -19,7 +33,7 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
         {
             if (hitCollider.TryGetComponent(out AEnemy enemy))
             {
-                enemy.TakeDamage(100);
+                enemy.TakeDamage(_damage);
             }
         }
         
@@ -27,7 +41,7 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         _health -= damage;
 

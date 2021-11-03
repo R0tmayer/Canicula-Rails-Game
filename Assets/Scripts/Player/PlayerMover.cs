@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class PlayerMover : APlayer
 {
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
+    private float _moveSpeed;
+    private float _rotateSpeed;
+    private float _nextWaypointDelay;
 
     private Waypoint _currentWaypoint;
     private IEnumerator _moveWaypointCoroutine;
@@ -13,7 +14,11 @@ public class PlayerMover : APlayer
 
     private void Start()
     {
+        base.Start();
         _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
+        _moveSpeed = currentDifficult.PlayerMoveSpeed;
+        _rotateSpeed = currentDifficult.PlayerRotateSpeed;
+        _nextWaypointDelay = currentDifficult.nextWaypointDelay;
 
         _currentWaypoint = _dataSceneStorage.FirstWaypoint;
         
@@ -26,12 +31,10 @@ public class PlayerMover : APlayer
         StartCoroutine(_moveWaypointCoroutine);
     }
 
-    private void OnDisable()
-    {
-    }
-
     private IEnumerator MoveToWaypoint()
     {
+        yield return new WaitForSeconds(_nextWaypointDelay);
+        
         Vector3 waypointPosition = _currentWaypoint.transform.position;
         Quaternion waypointRotation = _currentWaypoint.transform.rotation;
 
