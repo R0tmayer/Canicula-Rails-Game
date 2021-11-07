@@ -32,7 +32,19 @@ public class GameSettingsSO : ScriptableObject
     
     [Space(5)]
     [SerializeField] private float _firstAidKitHeal;
+
+    [Header("Props")] 
+    [SerializeField] private ParticleSystem _spawnBotEffect;
+    [SerializeField] private ParticleSystem _dieBotEffect;
     
+    [Header("HitEffects")] 
+    [SerializeField] private HitSpawner _enemyHit;
+    [SerializeField] private HitSpawner _metalHit;
+    [SerializeField] private HitSpawner _rockHit;
+    [SerializeField] private HitSpawner _sandHit;
+    [SerializeField] private HitSpawner _firstAidKitHit;
+    [SerializeField] private HitSpawner _barrelExplosion;
+
 
     public float PlayerMaxHealth => _playerMaxHealth;
     public float PlayerDamage => _playerDamage;
@@ -55,7 +67,16 @@ public class GameSettingsSO : ScriptableObject
     public float BarrelMaxHealth => _barrelMaxHealth;
     public float BarrelDamage => _barrelDamage;
     public float BarrelRadius => _barrelRadius;
-
     public float FirstAidKitHeal => _firstAidKitHeal;
 
+    public ParticleSystem SpawnBotEffect => _spawnBotEffect;
+    public ParticleSystem DieBotEffect => _dieBotEffect;
+    
+    public HitSpawner EnemyHit => _enemyHit;
+    public HitSpawner MetalHit => _metalHit;
+    public HitSpawner SandHit => _sandHit;
+    public HitSpawner RockHit => _rockHit;
+    public HitSpawner FirstAidKitHit => _firstAidKitHit;
+
+    public HitSpawner BarrelExplosion => _barrelExplosion;
 }

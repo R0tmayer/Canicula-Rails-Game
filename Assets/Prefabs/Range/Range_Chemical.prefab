@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6016797628562838881}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4001849885268757674}
   - component: {fileID: 1592365991495993257}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Bazooka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8314629123330780302}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6142151071006964623}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 6688230140422113320}
   - component: {fileID: 5510358495428051806}
   - component: {fileID: 1685446606409222286}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5346470327800018470}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thigh_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7241208629887457690}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: calf_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1070516163859581275}
   - component: {fileID: 3178739992620648353}
   - component: {fileID: 3067357948710278421}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: IceGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2881519478381674460}
   - component: {fileID: 8516125314456305546}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5399452905595487808}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8210063445317388782}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4048910259065626205}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hand_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 4247638382019036081}
   - component: {fileID: 4442696851344663336}
   - component: {fileID: 6511236816078294355}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GravityGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824288784526130431}
   - component: {fileID: 6086482007157489018}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5666417803367073855}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4571191447825644954}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: spine_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 2973560357677730003}
   - component: {fileID: 7750943591815742466}
   - component: {fileID: 6963536424754002348}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FlameThrowerDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7379860582832416199}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8152599819073494831}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905219536127869608}
   - component: {fileID: 8213796047684108256}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BazookaDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4799339544540695298}
   - component: {fileID: 7017627429972576769}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13820299859922339}
   - component: {fileID: 4014566829531079189}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SawGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339507890869967486}
   - component: {fileID: 9084034244920569731}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1338,7 +1338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9217465423822407648}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5307266010971827901}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1212798323023481399}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1431,7 +1431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2453002852384840562}
   - component: {fileID: 1654521663255928194}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5468976151717223942}
   - component: {fileID: 4195524718048241859}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1678,7 @@ GameObject:
   - component: {fileID: 2925913491820182491}
   - component: {fileID: 8608713480645402456}
   - component: {fileID: 5039460570854801909}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SMGDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1755,7 +1755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6610955297862005772}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 4799163419004867179}
   - component: {fileID: 1631035505410125254}
   - component: {fileID: 5067120992671568595}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Range_Chemical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5314747688396154241}
   - component: {fileID: 8575609059231540955}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,7 +2030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1781510718347481943}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2062,7 +2062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3019547743081908320}
   - component: {fileID: 7653707215863385654}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2184,7 +2184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8719679776122899934}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   - component: {fileID: 1274779886243345623}
   - component: {fileID: 6137055769549420401}
   - component: {fileID: 1200660885470649522}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701623186214981939}
   - component: {fileID: 5936902098901867253}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: RailGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,7 +2413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652762954717820854}
   - component: {fileID: 8099350055715499256}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2536,7 +2536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7575404991203003468}
   - component: {fileID: 5536504411461911235}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2658,7 +2658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7077078321193024919}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2691,7 +2691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4274017572679369746}
   - component: {fileID: 3402841484073154614}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3337240101391147519}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ball_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7976725112919414690}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3034480475583756418}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2906,7 +2906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590166173951740145}
   - component: {fileID: 1926430536120404408}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3028,7 +3028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5377792880027445424}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ball_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3059,7 +3059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503093145969717666}
   - component: {fileID: 3543405884599076417}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ElectricGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3143,7 +3143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7973693922585488238}
   - component: {fileID: 5899838236011410282}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3267,7 +3267,7 @@ GameObject:
   - component: {fileID: 255396159342072465}
   - component: {fileID: 6173646996392893162}
   - component: {fileID: 377872406062015263}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SMG_LeftDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3345,7 +3345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7178687919703890973}
   - component: {fileID: 1932608493856034581}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3468,7 +3468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7258792421567237593}
   - component: {fileID: 8550428706134280161}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3590,7 +3590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4129600887544222017}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint11 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3622,7 +3622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3854246196362135906}
   - component: {fileID: 5356713937410773535}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3744,7 +3744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4250541185536880617}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3776,7 +3776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9083895070174486407}
   - component: {fileID: 4462769341777128140}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3898,7 +3898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3691810639363333699}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: foot_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3930,7 +3930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186939981941079815}
   - component: {fileID: 4346564416808859871}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SawGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4015,7 +4015,7 @@ GameObject:
   - component: {fileID: 3254575694779611832}
   - component: {fileID: 6278889598399078377}
   - component: {fileID: 6426954307520672192}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ChemicalGun_LeftDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4092,7 +4092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7923705056565177630}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hand_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4145,7 +4145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2964085535424016155}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4176,7 +4176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108677373639202811}
   - component: {fileID: 5629522213580713694}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4298,7 +4298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3948573021212639925}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4329,7 +4329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2886902400130314858}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4362,7 +4362,7 @@ GameObject:
   - component: {fileID: 7407041990002848758}
   - component: {fileID: 381315516685008143}
   - component: {fileID: 1289209405346757334}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HMG_LeftDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4439,7 +4439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8726901883111868521}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4470,7 +4470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057794118024285924}
   - component: {fileID: 3373434298355628163}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: MiniGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046411085437667676}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4585,7 +4585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4576709950415778243}
   - component: {fileID: 6984723229803950026}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4708,7 +4708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4653554231461747127}
   - component: {fileID: 49898221070320514}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 3095843624964498487}
   - component: {fileID: 6716545769504426958}
   - component: {fileID: 4266419929167781407}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3096530722495728293}
   - component: {fileID: 1073313103407472381}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2749408055463869843}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint12 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5058,7 +5058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8752575494174536100}
   - component: {fileID: 345262659028124802}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5180,7 +5180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136672597547345511}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_03_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5210,7 +5210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2101856682494372760}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5243,7 +5243,7 @@ GameObject:
   - component: {fileID: 3891684550496172819}
   - component: {fileID: 5136407342989782975}
   - component: {fileID: 1903531207632812145}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SniperRifleDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5320,7 +5320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2560052863161825938}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: upperarm_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5351,7 +5351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2991661878963111991}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5385,7 +5385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123404882672809655}
   - component: {fileID: 1809075221228719663}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5508,7 +5508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886794313482395862}
   - component: {fileID: 7857560822535299826}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5631,7 +5631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7556012301827029250}
   - component: {fileID: 809786532410586506}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5753,7 +5753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 944354998875044158}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5784,7 +5784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7913788091930548405}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5815,7 +5815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4676616378475853989}
   - component: {fileID: 1067686290194172069}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CrossBowDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5867,7 +5867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4984470333333670471}
   - component: {fileID: 6964364423377397940}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BulletCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5912,7 +5912,7 @@ GameObject:
   - component: {fileID: 2260033620386300504}
   - component: {fileID: 2692500906807251600}
   - component: {fileID: 6810884024840656229}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AssaultRifleDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5989,7 +5989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76323572355812645}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6020,7 +6020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7952805361135276932}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thigh_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6051,7 +6051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8453598720729020777}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_01_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6083,7 +6083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6191020940896601858}
   - component: {fileID: 8294185022904620815}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: RailGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6134,7 +6134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2002874530187757729}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_03_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6165,7 +6165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7735212211781072063}
   - component: {fileID: 3037165069319451656}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: MiniGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6218,7 +6218,7 @@ GameObject:
   - component: {fileID: 3993406994059689329}
   - component: {fileID: 4241126360691834039}
   - component: {fileID: 893825212995039939}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ChemicalGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6295,7 +6295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465268566522325385}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6327,7 +6327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9098602790662369748}
   - component: {fileID: 3835424254680844547}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ShotgunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6379,7 +6379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6716400681036693619}
   - component: {fileID: 247356293670078218}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6502,7 +6502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4535893117509837765}
   - component: {fileID: 8963273156419028083}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6624,7 +6624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807847711886040397}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6655,7 +6655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2241232293783853650}
   - component: {fileID: 557943335543298015}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6778,7 +6778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5677562544066741791}
   - component: {fileID: 7265607122727888797}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6901,7 +6901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6270481821058652169}
   - component: {fileID: 604574560932454825}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7023,7 +7023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270853296228766487}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: spine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7054,7 +7054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3047015325646983607}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: thumb_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7086,7 +7086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8445573226418272437}
   - component: {fileID: 7352216826855536685}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7210,7 +7210,7 @@ GameObject:
   - component: {fileID: 4367873535657721667}
   - component: {fileID: 5413752782424316106}
   - component: {fileID: 4039318903159841857}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PistolDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7288,7 +7288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4668424317922601650}
   - component: {fileID: 6406689721935611368}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Crossbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7379,7 +7379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554975694701248010}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7410,7 +7410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9085070771239939329}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: lowerarm_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7443,7 +7443,7 @@ GameObject:
   - component: {fileID: 4378016243898991526}
   - component: {fileID: 1223891310963312301}
   - component: {fileID: 279481856730392813}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HMGDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7521,7 +7521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353547530653092722}
   - component: {fileID: 1544334034825102351}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7645,7 +7645,7 @@ GameObject:
   - component: {fileID: 668744110723283159}
   - component: {fileID: 2107384784637439597}
   - component: {fileID: 7118284367560222821}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SmokeGrenadeDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7724,7 +7724,7 @@ GameObject:
   - component: {fileID: 5483861012759890754}
   - component: {fileID: 575048111873036516}
   - component: {fileID: 2073309689594796076}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HuntingRifleDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7802,7 +7802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7903577323353176939}
   - component: {fileID: 6344353097391882417}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ElectricGunDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7853,7 +7853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2289938047574003530}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: clavicle_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7885,7 +7885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8495404229725649949}
   - component: {fileID: 8102496396057391737}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8008,7 +8008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893572924330968863}
   - component: {fileID: 5158589845216281037}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8130,7 +8130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1397510016719947389}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: neck_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8161,7 +8161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6792257480378919304}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: clavicle_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8194,7 +8194,7 @@ GameObject:
   - component: {fileID: 1136232381947104015}
   - component: {fileID: 8168500813404025644}
   - component: {fileID: 4047550932850927257}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: KnifeDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8271,7 +8271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8608607048054188101}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: foot_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8302,7 +8302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2705818188399866719}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: calf_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8334,7 +8334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222126795386898089}
   - component: {fileID: 5160994177650344433}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8457,7 +8457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2185708240015671258}
   - component: {fileID: 5912018883618635070}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8579,7 +8579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8389971270454051348}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: lowerarm_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8610,7 +8610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2322190898573472799}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_02_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8641,7 +8641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186382160178719736}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: spine_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8672,7 +8672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2690987259884463065}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: upperarm_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8703,7 +8703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8530432225631594912}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ring_01_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8736,7 +8736,7 @@ GameObject:
   - component: {fileID: 5779811771482382153}
   - component: {fileID: 8486554850683443731}
   - component: {fileID: 3003250532259253337}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Pistol_LeftDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8813,7 +8813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459319193438940216}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8844,7 +8844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8998031339492306781}
   - component: {fileID: 3997064490803248294}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8966,7 +8966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102242830685696143}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8997,7 +8997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5384024264933117800}
   - component: {fileID: 4229175740203470522}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9119,7 +9119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8609423556984422611}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9151,7 +9151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4351662615908623559}
   - component: {fileID: 2472334480475284273}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ElectricGun_LeftDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9202,7 +9202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6825037477310230732}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9234,7 +9234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043692654532617484}
   - component: {fileID: 4791143241600238120}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9357,7 +9357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6363231119910856878}
   - component: {fileID: 1112103991026203603}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ElectricGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9441,7 +9441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 579215090744535863}
   - component: {fileID: 2182723004096536409}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9563,7 +9563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2586794834876723001}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: index_02_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9594,7 +9594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6112012759605294942}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: joint19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9626,7 +9626,7 @@ GameObject:
   - component: {fileID: 8136481690468938711}
   - component: {fileID: 1170997620575241884}
   - component: {fileID: 1427135280580147740}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GrenadeDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9704,7 +9704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7678213022149139785}
   - component: {fileID: 4804187215821948177}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

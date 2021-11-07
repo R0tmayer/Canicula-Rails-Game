@@ -12,7 +12,7 @@ public abstract class AEnemy : MonoBehaviour, IDamagable
      protected float health;
      protected float moveSpeed;
      
-     protected APlayer player;
+     protected PlayerLife player;
      protected Animator animator;
 
      public event Action<float, float> HealthChanged;
@@ -22,12 +22,15 @@ public abstract class AEnemy : MonoBehaviour, IDamagable
      private const string _runTrigger = "Run";
      private const string _dieTrigger = "Die";
 
+     private ParticleSystem _spawnEffect;
+     private ParticleSystem _dieEffect;
+
      private void Awake()
      {
           _gameDifficultInstance = FindObjectOfType<GameDifficult>();
           currentDifficult = _gameDifficultInstance.CurrentDifficult;
 
-          player = FindObjectOfType<APlayer>();
+          player = FindObjectOfType<PlayerLife>();
           animator = GetComponent<Animator>();
           
           startDelay = currentDifficult.BotsStartDelay;
@@ -35,12 +38,17 @@ public abstract class AEnemy : MonoBehaviour, IDamagable
           _botsTimeDeactivate = currentDifficult.BotsTimeDeactivate;
      }
 
+     private void OnEnable()
+     {
+          Instantiate(currentDifficult.SpawnBotEffect, transform);
+     }
+
      private void Die()
      {
           DieAnimation();
           Died?.Invoke(this);
           GetComponent<Collider>().enabled = false;
-          
+          Instantiate(currentDifficult.DieBotEffect, transform.position + Vector3.up * 2.5f, Quaternion.identity);
           moveSpeed = 0;
           
           StartCoroutine(Deactivate());

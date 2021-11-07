@@ -22,11 +22,26 @@ MonoBehaviour:
   _botsDamage: 5
   _botsTimeDeactivate: 4
   _rangeMoveSpeed: 15
-  _rangeMovePeriod: 2
-  _rangeShotPeriod: 1
+  _rangeMovePeriod: 0
+  _rangeShotPeriod: 3
   _meleeMoveSpeed: 4
   _meleeStopDistance: 2
   _barrelMaxHealth: 5
   _barrelDamage: 15
   _barrelRadius: 5
   _firstAidKitHeal: 1
+  _spawnBotEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  _dieBotEffect: {fileID: 198194127032045410, guid: 46876a2780737ec45a19d62f88e5ce56,
+    type: 3}
+  _enemyHit: {fileID: -5780515332535590890, guid: 1e4f034dcde700945ae0b5334323f730,
+    type: 3}
+  _metalHit: {fileID: -8384381683125166552, guid: 67035e7cf7fd1034fa8454e1c66bc7d6,
+    type: 3}
+  _rockHit: {fileID: -8077239819449258942, guid: b6eac7872b1bd0b459c97cc4c0223905,
+    type: 3}
+  _sandHit: {fileID: 5477706898672188719, guid: 41c93b0d75001a64d8aefbc54395543d,
+    type: 3}
+  _firstAidKitHit: {fileID: 6639850393197458650, guid: 33bc40d62b7fd8f4a80a1e75a37a0bd4,
+    type: 3}
+  _barrelExplosion: {fileID: 491893904715380851, guid: c7827f0faf9cfd64facd06f58229dfd2,
+    type: 3}

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Bullet : MonoBehaviour
@@ -11,7 +9,7 @@ public class Bullet : MonoBehaviour
     private GameSettingsSO _currentDifficult;
     
     private Rigidbody _rigidbody;
-    private APlayer _player;
+    private PlayerLife _player;
     private float _timer;
     private const float _timeToDeactivate = 3;
 
@@ -21,7 +19,7 @@ public class Bullet : MonoBehaviour
         _currentDifficult = _gameDifficultInstance.CurrentDifficult;
         
         _rigidbody = GetComponent<Rigidbody>();
-        _player = FindObjectOfType<APlayer>();
+        _player = FindObjectOfType<PlayerLife>();
     }
 
     private void Update()
@@ -39,11 +37,10 @@ public class Bullet : MonoBehaviour
         _rigidbody.velocity = (_player.transform.position - transform.position).normalized * _moveSpeed;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out APlayer player))
+        if (other.TryGetComponent(out PlayerLife player))
         {
-            CameraShake.Shake();
             player.TakeDamage(_currentDifficult.BotsDamage);
             Die();
         }

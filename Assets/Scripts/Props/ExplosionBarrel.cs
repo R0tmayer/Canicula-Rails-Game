@@ -8,6 +8,10 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
     private float _health;
     private float _explosionRadius;
     private float _damage;
+    private HitSpawner _explosionEffect;
+
+    public float Health => _health;
+
 
     private void Start()
     {
@@ -17,6 +21,7 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
         _health = _currentDifficult.BarrelMaxHealth;
         _explosionRadius = _currentDifficult.BarrelRadius;
         _damage = _currentDifficult.BarrelDamage;
+        _explosionEffect = _currentDifficult.BarrelExplosion;
     }
 
     private void OnDrawGizmosSelected()
@@ -34,8 +39,13 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
             if (hitCollider.TryGetComponent(out AEnemy enemy))
             {
                 enemy.TakeDamage(_damage);
+
+                
             }
         }
+        
+        HitSpawner spawned = Instantiate(_explosionEffect, transform.position + Vector3.down, Quaternion.identity);
+        spawned.SpawnEffects();
         
         gameObject.SetActive(false);
     }
@@ -43,9 +53,9 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
-        _health -= damage;
+        _health = Health - damage;
 
-        if (_health <= 0)
+        if (Health <= 0)
         {
             Explode();
         }

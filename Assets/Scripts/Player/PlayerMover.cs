@@ -1,30 +1,38 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PlayerMover : APlayer
+public class PlayerMover : MonoBehaviour
 {
+    private GameDifficult _gameDifficultInstance;
+    private GameSettingsSO currentDifficult;
+
     private float _moveSpeed;
     private float _rotateSpeed;
     private float _nextWaypointDelay;
 
     private Waypoint _currentWaypoint;
     private IEnumerator _moveWaypointCoroutine;
+    [SerializeField] private AnimationController animationController;
 
     private DataSceneStorage _dataSceneStorage;
 
-    private void Start()
+    protected void Start()
     {
-        base.Start();
+        _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        currentDifficult = _gameDifficultInstance.CurrentDifficult;
+
         _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
+        _currentWaypoint = _dataSceneStorage.FirstWaypoint;
+
+
         _moveSpeed = currentDifficult.PlayerMoveSpeed;
         _rotateSpeed = currentDifficult.PlayerRotateSpeed;
         _nextWaypointDelay = currentDifficult.nextWaypointDelay;
 
-        _currentWaypoint = _dataSceneStorage.FirstWaypoint;
-        
+
         foreach (var waypoint in _dataSceneStorage.AllWaypointsOnScene)
         {
-                waypoint.AllEnemiesDied += OnAllEnemiesDied;
+            waypoint.AllEnemiesDied += OnAllEnemiesDied;
         }
 
         _moveWaypointCoroutine = MoveToWaypoint();
@@ -34,9 +42,12 @@ public class PlayerMover : APlayer
     private IEnumerator MoveToWaypoint()
     {
         yield return new WaitForSeconds(_nextWaypointDelay);
+        animationController.PlayWalkAnimation();
+
+        Transform waypointTransform = _currentWaypoint.transform;
         
-        Vector3 waypointPosition = _currentWaypoint.transform.position;
-        Quaternion waypointRotation = _currentWaypoint.transform.rotation;
+        Vector3 waypointPosition = waypointTransform.position;
+        Quaternion waypointRotation = waypointTransform.rotation;
 
         while (Vector3.Distance(transform.position, waypointPosition) > 0.5f ||
                Quaternion.Angle(transform.rotation, waypointRotation) > 0.5f)
@@ -50,6 +61,7 @@ public class PlayerMover : APlayer
         }
 
         _currentWaypoint.ActivateEnemies();
+        animationController.PlayIdleAnimation();
     }
 
     private void OnAllEnemiesDied()
@@ -57,11 +69,16 @@ public class PlayerMover : APlayer
         _currentWaypoint.AllEnemiesDied -= OnAllEnemiesDied;
         _currentWaypoint = _dataSceneStorage.NextWaypoint;
 
-        if (_moveWaypointCoroutine != null)
+        if (_moveWaypointCoroutine == null)
         {
-            StopCoroutine(_moveWaypointCoroutine);
-            _moveWaypointCoroutine = MoveToWaypoint();
-            StartCoroutine(_moveWaypointCoroutine);
+            Debug.Log("MoveWaypointCoroutine is Null");
+            return;
         }
+        
+        StopCoroutine(_moveWaypointCoroutine);
+        _moveWaypointCoroutine = MoveToWaypoint();
+        StartCoroutine(_moveWaypointCoroutine);
     }
+
+
 }

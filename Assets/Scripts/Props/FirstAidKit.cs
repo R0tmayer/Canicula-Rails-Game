@@ -1,23 +1,38 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class FirstAidKit : MonoBehaviour, ICollectable
+public class FirstAidKit : MonoBehaviour, ICollectableByPlayer
 {
     private GameDifficult _gameDifficultInstance;
-    protected GameSettingsSO currentDifficult;
+    private GameSettingsSO currentDifficult;
+    private PlayerLife _player;
     
     private float _healingValue;
+    private float _zAngle;
 
-    private void STart()
+    private void Start()
     {
         _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        _player = FindObjectOfType<PlayerLife>();
+        
         currentDifficult = _gameDifficultInstance.CurrentDifficult;
         
         _healingValue = currentDifficult.FirstAidKitHeal;
+        _zAngle = transform.localEulerAngles.z;
     }
 
-    public void Collect(APlayer player)
+    private void Update()
     {
-        player.Heal(_healingValue);
+        Vector3 lookPos = _player.transform.position - transform.position;
+        Quaternion lookRot = Quaternion.LookRotation(lookPos, Vector3.up);
+        var eulerY = lookRot.eulerAngles.y;
+        Quaternion rotation = Quaternion.Euler (0, eulerY, _zAngle);
+        transform.rotation = rotation;
+    }
+
+    public void CollectByPlayer()
+    {
+        _player.TakeHeal(_healingValue);
         gameObject.SetActive(false);
     }
 }
