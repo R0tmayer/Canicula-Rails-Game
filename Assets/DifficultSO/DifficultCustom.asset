@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2fb57d264b4b341aa6c352924ef24e, type: 3}
   m_Name: DifficultCustom
   m_EditorClassIdentifier: 
-  _playerMaxHealth: 1000
+  _playerMaxHealth: 10
   _playerDamage: 5
   _playerMoveSpeed: 3
   _playerRotateSpeed: 30
@@ -22,12 +22,12 @@ MonoBehaviour:
   _botsDamage: 5
   _botsTimeDeactivate: 3
   _rangeMoveSpeed: 15
-  _rangeMovePeriod: 1
+  _rangeMovePeriod: 0
   _rangeShotPeriod: 3
   _meleeMoveSpeed: 4
   _meleeStopDistance: 3
   _barrelMaxHealth: 6
-  _barrelDamage: 40
+  _barrelDamage: 2
   _barrelRadius: 5
   _firstAidKitHeal: 1
   _spawnBotEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}

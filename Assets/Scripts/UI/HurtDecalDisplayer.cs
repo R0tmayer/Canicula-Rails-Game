@@ -24,7 +24,7 @@ public class HurtDecalDisplayer : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.Hit += OnPlayerTakeHit;
+        _player.Hitted += OnPlayerHitted;
     }
 
     private void Update()
@@ -34,10 +34,10 @@ public class HurtDecalDisplayer : MonoBehaviour
 
     private void OnDisable()
     {
-        _player.Hit -= OnPlayerTakeHit;
+        _player.Hitted -= OnPlayerHitted;
     }
 
-    private void OnPlayerTakeHit()
+    private void OnPlayerHitted()
     {
         if (_timer >= _timeToNextImage)
         {

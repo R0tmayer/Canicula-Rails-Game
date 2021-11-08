@@ -20,7 +20,7 @@ public class CameraShake : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.Hit += OnHit;
+        _player.Hitted += OnPlayerHitted;
     }
 
     private void Update()
@@ -41,10 +41,10 @@ public class CameraShake : MonoBehaviour
 
     private void OnDisable()
     {
-        _player.Hit -= OnHit;
+        _player.Hitted -= OnPlayerHitted;
     }
 
-    private void OnHit()
+    private void OnPlayerHitted()
     {
         Shake();
     }

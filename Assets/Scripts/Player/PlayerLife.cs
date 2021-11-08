@@ -11,7 +11,9 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
     private float _maxHealth;
     private float _health;
     
-    public event Action Hit;
+    public event Action<float> HealthChanged;
+    public event Action Died;
+    public event Action Hitted;
 
     private void Start()
     {
@@ -20,20 +22,25 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
         
         _maxHealth = currentDifficult.PlayerMaxHealth;
         _health = _maxHealth;
+        
+        HealthChanged?.Invoke(_health);
+        
     }
     
     private void Die()
     {
-        Debug.LogError("YOU DIED! PLAYER HP IS " + _health );
+        // Debug.LogWarning("YOU DIED! PLAYER HP IS " + _health );
     }
 
     public void TakeDamage(float damage)
     {
         _health -= damage;
-        Hit?.Invoke();
+        HealthChanged?.Invoke(_health);
+        Hitted?.Invoke();
 
         if (_health <= 0)
         {
+            Died?.Invoke();
             Die();
         }
     }
@@ -46,5 +53,7 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
         {
             _health = _maxHealth;
         }
+
+        HealthChanged?.Invoke(_health);
     }
 }
