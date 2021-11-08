@@ -21,6 +21,11 @@ public class Waypoint : MonoBehaviour
     private void Start()
     {
         SpawnEnemies();
+
+        if(_enemies.Count == 0)
+        {
+            AllEnemiesDied?.Invoke();
+        }
     }
 
     private void OnEnemyDied(AEnemy enemy)

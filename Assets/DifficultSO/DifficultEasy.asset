@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMaxHealth: 10
   _playerDamage: 10
-  _playerMoveSpeed: 5
+  _playerMoveSpeed: 3
   _playerRotateSpeed: 30
   _nextWaypointDelay: 1
   _botsStartDelay: 1

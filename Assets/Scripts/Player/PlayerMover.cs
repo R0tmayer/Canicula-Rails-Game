@@ -24,11 +24,9 @@ public class PlayerMover : MonoBehaviour
         _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
         _currentWaypoint = _dataSceneStorage.FirstWaypoint;
 
-
         _moveSpeed = currentDifficult.PlayerMoveSpeed;
         _rotateSpeed = currentDifficult.PlayerRotateSpeed;
         _nextWaypointDelay = currentDifficult.nextWaypointDelay;
-
 
         foreach (var waypoint in _dataSceneStorage.AllWaypointsOnScene)
         {
