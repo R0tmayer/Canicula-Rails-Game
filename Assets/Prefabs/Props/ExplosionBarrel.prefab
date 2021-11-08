@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4563783210275026429}
   - component: {fileID: -326637790042048264}
   m_Layer: 0
-  m_Name: OilBarrel
+  m_Name: ExplosionBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -155,3 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03a5dda76807f242999c6419b910b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firstAidKitPrefab: {fileID: 7944088292521889966, guid: 24e526d906ca001439073aa486fe7097,
+    type: 3}

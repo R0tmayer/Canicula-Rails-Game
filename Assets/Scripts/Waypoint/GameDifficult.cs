@@ -36,7 +36,6 @@ public class GameDifficult : MonoBehaviour
             case Difficult.Custom:
                 CurrentDifficult = _customDifficult;
                 break;
-
             default:
                 throw new ArgumentOutOfRangeException();
         }

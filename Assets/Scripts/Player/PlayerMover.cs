@@ -60,6 +60,14 @@ public class PlayerMover : MonoBehaviour
 
         _currentWaypoint.ActivateEnemies();
         animationController.PlayIdleAnimation();
+        
+        if (_currentWaypoint.EnemiesCount == 0)
+        {
+            _currentWaypoint = _dataSceneStorage.NextWaypoint;
+            StopCoroutine(_moveWaypointCoroutine);
+            _moveWaypointCoroutine = MoveToWaypoint();
+            StartCoroutine(_moveWaypointCoroutine);
+        }
     }
 
     private void OnAllEnemiesDied()
@@ -77,6 +85,5 @@ public class PlayerMover : MonoBehaviour
         _moveWaypointCoroutine = MoveToWaypoint();
         StartCoroutine(_moveWaypointCoroutine);
     }
-
-
+    
 }

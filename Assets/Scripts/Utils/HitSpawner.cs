@@ -21,7 +21,7 @@ public class HitSpawner : MonoBehaviour
         if (_sprite != null)
         {
             Quaternion hitRotation = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-            Instantiate(_sprite, hit.point - (hit.point * 0.025f), hitRotation);
+            Instantiate(_sprite, hit.point - (hit.point * 0.001f), hitRotation);
         }
 
         if (_audioSource != null && _audioSource.clip != null)

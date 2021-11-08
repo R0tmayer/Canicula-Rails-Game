@@ -27,11 +27,12 @@ public abstract class AEnemy : MonoBehaviour, IDamagable
 
      private void Awake()
      {
+          animator = GetComponent<Animator>();
+
           _gameDifficultInstance = FindObjectOfType<GameDifficult>();
           currentDifficult = _gameDifficultInstance.CurrentDifficult;
 
           player = FindObjectOfType<PlayerLife>();
-          animator = GetComponent<Animator>();
           
           startDelay = currentDifficult.BotsStartDelay;
           health = currentDifficult.BotsMaxHealth;

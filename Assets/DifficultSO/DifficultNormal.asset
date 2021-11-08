@@ -16,7 +16,7 @@ MonoBehaviour:
   _playerDamage: 5
   _playerMoveSpeed: 3
   _playerRotateSpeed: 30
-  _nextWaypointDelay: 1
+  _nextWaypointDelay: 0.5
   _botsStartDelay: 1
   _botsMaxHealth: 20
   _botsDamage: 5

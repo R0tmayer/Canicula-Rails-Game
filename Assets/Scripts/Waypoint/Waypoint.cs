@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,6 +11,8 @@ public class Waypoint : MonoBehaviour
     private DataSceneStorage _dataSceneStorage;
 
     public event Action AllEnemiesDied;
+
+    public float EnemiesCount => _enemies.Count;
 
     private void Awake()
     {
@@ -22,10 +25,6 @@ public class Waypoint : MonoBehaviour
     {
         SpawnEnemies();
 
-        if(_enemies.Count == 0)
-        {
-            AllEnemiesDied?.Invoke();
-        }
     }
 
     private void OnEnemyDied(AEnemy enemy)

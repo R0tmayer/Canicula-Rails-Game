@@ -70,13 +70,19 @@ public class PlayerShooter : MonoBehaviour
                 }
                 else if (LayerMask.LayerToName(hit.collider.gameObject.layer)  == "Rock")
                 {
-                    HitSpawner spawned = Instantiate(_rockHit);
+                    HitSpawner spawned = Instantiate(_rockHit, hit.transform.position, Quaternion.identity);
                     spawned.SpawnEffects(hit);
                 }
                 else if (LayerMask.LayerToName(hit.collider.gameObject.layer)  == "Sand")
                 {
                     HitSpawner spawned = Instantiate(_sandHit);
                     spawned.SpawnEffects(hit);
+                }
+                else if (LayerMask.LayerToName(hit.collider.gameObject.layer) == "Metal")
+                {
+                    HitSpawner metalEffect = Instantiate(_metalHit);
+                    metalEffect.SpawnEffects(hit);
+                    return;
                 }
                 
             }

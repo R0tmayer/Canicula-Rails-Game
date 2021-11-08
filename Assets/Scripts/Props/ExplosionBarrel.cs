@@ -4,6 +4,7 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
 {
     private GameDifficult _gameDifficultInstance;
     private GameSettingsSO _currentDifficult;
+    [SerializeField] private FirstAidKit _firstAidKitPrefab;
     
     private float _health;
     private float _explosionRadius;
@@ -11,7 +12,6 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
     private HitSpawner _explosionEffect;
 
     public float Health => _health;
-
 
     private void Start()
     {
@@ -58,6 +58,7 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
         if (Health <= 0)
         {
             Explode();
+            Instantiate(_firstAidKitPrefab, transform.position + Vector3.up * 1.5f, _firstAidKitPrefab.transform.rotation);
         }
     }
 }
