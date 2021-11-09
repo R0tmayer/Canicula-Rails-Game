@@ -19,7 +19,7 @@ MonoBehaviour:
   _nextWaypointDelay: 0.5
   _botsStartDelay: 1
   _botsMaxHealth: 5
-  _botsDamage: 5
+  _botsDamage: 2
   _botsTimeDeactivate: 3
   _rangeMoveSpeed: 15
   _rangeMovePeriod: 0

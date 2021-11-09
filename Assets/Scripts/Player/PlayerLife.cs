@@ -24,7 +24,6 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
         _health = _maxHealth;
         
         HealthChanged?.Invoke(_health);
-        
     }
     
     private void Die()

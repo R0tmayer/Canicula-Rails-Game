@@ -7,6 +7,8 @@ public class DataSceneStorage : MonoBehaviour
     [SerializeField] private Waypoint[] _waypoints;
     private int _index;
 
+    public event Action LastWaypointReached;
+
     public AEnemy[] Pull
     {
         get => _pull;
@@ -18,14 +20,14 @@ public class DataSceneStorage : MonoBehaviour
         {
             _index++;
 
-            try
+            if(_index == _waypoints.Length)
             {
-                return _waypoints[_index];
+                LastWaypointReached?.Invoke();
+                return null;
             }
-            catch (IndexOutOfRangeException)
-            {
-                throw new IndexOutOfRangeException();
-            }
+
+            return _waypoints[_index];
+
         }
     }
 

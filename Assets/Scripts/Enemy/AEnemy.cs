@@ -5,80 +5,90 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public abstract class AEnemy : MonoBehaviour, IDamagable
 {
-     private GameDifficult _gameDifficultInstance;
-     protected GameSettingsSO currentDifficult;
+    private GameDifficult _gameDifficultInstance;
+    protected GameSettingsSO currentDifficult;
 
-     protected float startDelay;
-     protected float health;
-     protected float moveSpeed;
-     
-     protected PlayerLife player;
-     protected Animator animator;
+    protected float startDelay;
+    protected float health;
+    protected float moveSpeed;
 
-     public event Action<float, float> HealthChanged;
-     public event Action<AEnemy> Died;
+    protected PlayerLife player;
+    protected Animator animator;
 
-     private float _botsTimeDeactivate;
-     private const string _runTrigger = "Run";
-     private const string _dieTrigger = "Die";
+    public event Action<float> HealthChanged;
+    public event Action<AEnemy> Died;
 
-     private ParticleSystem _spawnEffect;
-     private ParticleSystem _dieEffect;
+    private float _botsTimeDeactivate;
+    private const string _runTrigger = "Run";
+    private const string _dieTrigger = "Die";
 
-     private void Awake()
-     {
-          animator = GetComponent<Animator>();
+    private ParticleSystem _spawnEffect;
+    private ParticleSystem _dieEffect;
 
-          _gameDifficultInstance = FindObjectOfType<GameDifficult>();
-          currentDifficult = _gameDifficultInstance.CurrentDifficult;
+    public float MaxHealth { get; private set; }
 
-          player = FindObjectOfType<PlayerLife>();
-          
-          startDelay = currentDifficult.BotsStartDelay;
-          health = currentDifficult.BotsMaxHealth;
-          _botsTimeDeactivate = currentDifficult.BotsTimeDeactivate;
-     }
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
 
-     private void OnEnable()
-     {
-          Instantiate(currentDifficult.SpawnBotEffect, transform);
-     }
+        _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        currentDifficult = _gameDifficultInstance.CurrentDifficult;
 
-     private void Die()
-     {
-          DieAnimation();
-          Died?.Invoke(this);
-          GetComponent<Collider>().enabled = false;
-          Instantiate(currentDifficult.DieBotEffect, transform.position + Vector3.up * 2.5f, Quaternion.identity);
-          moveSpeed = 0;
-          
-          StartCoroutine(Deactivate());
-     }
+        player = FindObjectOfType<PlayerLife>();
 
-     private IEnumerator Deactivate()
-     {
-          yield return new WaitForSeconds(_botsTimeDeactivate);
-          gameObject.SetActive(false);
-     }
+        startDelay = currentDifficult.BotsStartDelay;
+        health = currentDifficult.BotsMaxHealth;
+        MaxHealth = currentDifficult.BotsMaxHealth;
 
-     private void DieAnimation()
-     {
-          animator.SetTrigger(_dieTrigger);
-     }
+        _botsTimeDeactivate = currentDifficult.BotsTimeDeactivate;
+    }
 
-     protected void RunAnimation()
-     {
-          animator.SetTrigger(_runTrigger);
-     }
+    private void OnEnable()
+    {
+        Instantiate(currentDifficult.SpawnBotEffect, transform);
+    }
 
-     public void TakeDamage(float damage)
-     {
-          health -= damage;
-          HealthChanged?.Invoke(health, currentDifficult.BotsMaxHealth);
+    private void Die()
+    {
+        DieAnimation();
+        Died?.Invoke(this);
+        GetComponent<Collider>().enabled = false;
+        Instantiate(currentDifficult.DieBotEffect, transform.position + Vector3.up * 2.5f, Quaternion.identity);
+        moveSpeed = 0;
 
-          if (health <= 0)
-          {
-               Die();
-          }
-     }
+        StartCoroutine(Deactivate());
+    }
+
+    private IEnumerator Deactivate()
+    {
+        yield return new WaitForSeconds(_botsTimeDeactivate);
+        gameObject.SetActive(false);
+    }
+
+    private void DieAnimation()
+    {
+        animator.SetTrigger(_dieTrigger);
+    }
+
+    protected void RunAnimation()
+    {
+        animator.SetTrigger(_runTrigger);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        HealthChanged?.Invoke(health);
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void SetBossHealth(float health)
+    {
+        this.health = health;
+        MaxHealth = health;
+    }
 }

@@ -7,14 +7,17 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Canvases")]
     [SerializeField] private GameObject _pauseUI;
-    [SerializeField] private GameObject _gameCanvasUI;
+    [SerializeField] private GameObject _gameCanvas;
     [SerializeField] private GameObject _gameOverCanvas;
-    [SerializeField] private Text _soundToggleText;
+    [SerializeField] private GameObject _winGameCanvas;
+    [SerializeField] private Text _musicToggleText;
+    [SerializeField] private SceneLoader _sceneLoader;
     
     [SerializeField] private AudioSource _musicAudioSource;
     [SerializeField] private AudioSource _gameOverAudioSource;
+
+    private DataSceneStorage _dataSceneStorage;
 
     private PlayerLife _player;
     private bool _musicOn = true;
@@ -22,39 +25,64 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         _player = FindObjectOfType<PlayerLife>();
-        _player.Died += GameOver;
+        _dataSceneStorage = FindObjectOfType<DataSceneStorage>();
 
+        _player.Died += GameOver;
+        _dataSceneStorage.LastWaypointReached += OnLastPointReached;
     }
 
     private void OnDisable()
     {
         _player.Died -= GameOver;
-    }   
+        _dataSceneStorage.LastWaypointReached -= OnLastPointReached;
+    }
 
     private void ClearUI()
     {
         _pauseUI.SetActive(false);
-        _gameCanvasUI.SetActive(false);
+        _gameCanvas.SetActive(false);
         _gameOverCanvas.SetActive(false);
+        _winGameCanvas.SetActive(false);
     }
     
+    private void WinGame()
+    {
+        ClearUI();
+        Time.timeScale = 0;
+
+        _winGameCanvas.SetActive(true);
+    }
+
+    private void GameOver()
+    {
+        ClearUI();
+        Time.timeScale = 0;
+        _musicAudioSource.Stop();
+        _gameOverAudioSource.Play();
+        _gameOverCanvas.SetActive(true);
+    }
+
     public void Resume()
     {
         Time.timeScale = 1;
         
         ClearUI();
-        _gameCanvasUI.SetActive(true);
+        _gameCanvas.SetActive(true);
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(StaticSceneNames.GAME_SCENE);
+        ClearUI();
+        _gameCanvas.SetActive(true);
+
+        _sceneLoader.LoadGameScene();
+
         Time.timeScale = 1;
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(StaticSceneNames.MENU_SCENE);
+        _sceneLoader.LoadMenuScene();
         Time.timeScale = 1;
     }
 
@@ -63,12 +91,12 @@ public class UIManager : MonoBehaviour
         if (_musicOn)
         {
             _musicAudioSource.Stop();
-            _soundToggleText.text = "MUSIC:OFF";
+            _musicToggleText.text = "MUSIC:OFF";
         }
         else
         {
             _musicAudioSource.Play();
-            _soundToggleText.text = "MUSIC:ON";
+            _musicToggleText.text = "MUSIC:ON";
 
         }
         
@@ -81,14 +109,11 @@ public class UIManager : MonoBehaviour
         
         ClearUI();
         _pauseUI.SetActive(true);
-
     }
 
-    private void GameOver()
+    
+    private void OnLastPointReached()
     {
-        ClearUI();
-        // _musicAudioSource.Stop();
-        _gameOverAudioSource.Play();
-        _gameOverCanvas.SetActive(true);
+        WinGame();
     }
 }

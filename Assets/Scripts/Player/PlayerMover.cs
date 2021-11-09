@@ -39,6 +39,11 @@ public class PlayerMover : MonoBehaviour
 
     private IEnumerator MoveToWaypoint()
     {
+        if(_currentWaypoint == null)
+        {
+            yield break;
+        }
+
         yield return new WaitForSeconds(_nextWaypointDelay);
         animationController.PlayWalkAnimation();
 
@@ -85,5 +90,4 @@ public class PlayerMover : MonoBehaviour
         _moveWaypointCoroutine = MoveToWaypoint();
         StartCoroutine(_moveWaypointCoroutine);
     }
-    
 }

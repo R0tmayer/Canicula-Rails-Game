@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class Waypoint : MonoBehaviour
@@ -11,6 +12,7 @@ public class Waypoint : MonoBehaviour
     private DataSceneStorage _dataSceneStorage;
 
     public event Action AllEnemiesDied;
+    public UnityEvent SpecialFunctions;
 
     public float EnemiesCount => _enemies.Count;
 
@@ -24,7 +26,6 @@ public class Waypoint : MonoBehaviour
     private void Start()
     {
         SpawnEnemies();
-
     }
 
     private void OnEnemyDied(AEnemy enemy)
@@ -58,10 +59,19 @@ public class Waypoint : MonoBehaviour
 
     public void ActivateEnemies()
     {
+        SpecialFunctions?.Invoke();
+
         foreach (var enemy in _enemies)
         {
             enemy.gameObject.SetActive(true);
         }
     }
     
+    public void SpawnBoss()
+    {
+        var boss = _enemies[Random.Range(0, _enemies.Count)];
+        boss.transform.localScale *= 2;
+        boss.SetBossHealth(30);
+
+    }
 }

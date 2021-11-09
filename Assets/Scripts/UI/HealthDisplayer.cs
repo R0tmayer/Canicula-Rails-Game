@@ -9,19 +9,20 @@ public class HealthDisplayer : MonoBehaviour
     [SerializeField] private Text _healthText;
     private PlayerLife _player;
 
-    private void Start()
+    private void Awake()
     {
         _player = FindObjectOfType<PlayerLife>();
-        _player.HealthChanged += OnHealthChanged;
+    }
 
+    private void OnEnable()
+    {
+        _player.HealthChanged += OnHealthChanged;
     }
 
     private void OnDisable()
     {
         _player.HealthChanged -= OnHealthChanged;
     }
-
-
 
     private void OnHealthChanged(float health)
     {
