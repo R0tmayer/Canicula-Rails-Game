@@ -4,6 +4,8 @@ public class PlayerShooter : MonoBehaviour
 {
     private GameDifficult _gameDifficultInstance;
     private GameSettingsSO currentDifficult;
+    private StatsManager _statsManager;
+
 
     private HitSpawner _enemyHit;
     private HitSpawner _metalHit;
@@ -18,6 +20,7 @@ public class PlayerShooter : MonoBehaviour
     private void Start()
     {
         _gameDifficultInstance = FindObjectOfType<GameDifficult>();
+        _statsManager = FindObjectOfType<StatsManager>();
         currentDifficult = _gameDifficultInstance.CurrentDifficult;
 
         _enemyHit = currentDifficult.EnemyHit;
@@ -40,47 +43,45 @@ public class PlayerShooter : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-            const int rayLength = 10000;
+            const int rayLength = 1000;
 
             if (Physics.Raycast(ray, out RaycastHit hit, rayLength))
             {
+                
                 if (hit.collider.TryGetComponent(out IDamagable hitObject))
                 {
                     hitObject.TakeDamage(_damage);
 
                     if (LayerMask.LayerToName(hit.collider.gameObject.layer) == "Metal")
                     {
-                        HitSpawner metalEffect = Instantiate(_metalHit);
-                        metalEffect.SpawnEffects(hit);
+                        CreateEffect(_metalHit, hit);
+
                         return;
                     }
                     
-                    HitSpawner spawned = Instantiate(_enemyHit);
-                    spawned.SpawnEffects(hit);
+                    CreateEffect(_enemyHit, hit);
+                    _statsManager.IncreaseTotalHits();
                     
                 }
                 else if (hit.collider.TryGetComponent(out ICollectableByPlayer collectableObject))
                 {
                     collectableObject.CollectByPlayer();
                     
-                    HitSpawner spawned = Instantiate(_firstAidKitHit);
-                    spawned.SpawnEffects(hit);
-                    
+                    CreateEffect(_firstAidKitHit, hit);
                 }
                 else if (LayerMask.LayerToName(hit.collider.gameObject.layer)  == "Rock")
                 {
-                    HitSpawner spawned = Instantiate(_rockHit, hit.transform.position, Quaternion.identity);
-                    spawned.SpawnEffects(hit);
+                    CreateEffect(_rockHit, hit);
+
                 }
                 else if (LayerMask.LayerToName(hit.collider.gameObject.layer)  == "Sand")
                 {
-                    HitSpawner spawned = Instantiate(_sandHit);
-                    spawned.SpawnEffects(hit);
+                    CreateEffect(_sandHit, hit);
+
                 }
                 else if (LayerMask.LayerToName(hit.collider.gameObject.layer) == "Metal")
                 {
-                    HitSpawner metalEffect = Instantiate(_metalHit);
-                    metalEffect.SpawnEffects(hit);
+                    CreateEffect(_metalHit, hit);
                     return;
                 }
                 
@@ -88,5 +89,10 @@ public class PlayerShooter : MonoBehaviour
             
             _shootAudioSource.Play();
         }
+    }
+
+    private void CreateEffect(HitSpawner effect, RaycastHit hit)
+    {
+        HitSpawner spawned = Instantiate(effect,hit.point - hit.point * 0.001f, Quaternion.FromToRotation(Vector3.forward, hit.normal));
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour, IHealable, IDamagable
 {
-    private GameDifficult _gameDifficultInstance;
+    private GameDifficult _gameDifficult;
     private GameSettingsSO currentDifficult;
     
     private float _maxHealth;
@@ -15,8 +15,8 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
 
     private void Start()
     {
-        _gameDifficultInstance = FindObjectOfType<GameDifficult>();
-        currentDifficult = _gameDifficultInstance.CurrentDifficult;
+        _gameDifficult = FindObjectOfType<GameDifficult>();
+        currentDifficult = _gameDifficult.CurrentDifficult;
         
         _maxHealth = currentDifficult.PlayerMaxHealth;
         _health = _maxHealth;
@@ -24,21 +24,15 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
         HealthChanged?.Invoke(_health);
     }
     
-    private void Die()
-    {
-        Debug.LogWarning("YOU DIED! PLAYER HP IS " + _health);
-    }
-
     public void TakeDamage(float damage)
     {
         _health -= damage;
-        HealthChanged?.Invoke(_health);
         Hitted?.Invoke();
+        HealthChanged?.Invoke(_health);
 
         if (_health <= 0)
         {
             Died?.Invoke();
-            Die();
         }
     }
 

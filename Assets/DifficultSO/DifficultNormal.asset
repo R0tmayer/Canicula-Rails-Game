@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2fb57d264b4b341aa6c352924ef24e, type: 3}
   m_Name: DifficultNormal
   m_EditorClassIdentifier: 
-  _playerMaxHealth: 10
+  _playerMaxHealth: 15
   _playerDamage: 5
   _playerMoveSpeed: 3
   _playerRotateSpeed: 30

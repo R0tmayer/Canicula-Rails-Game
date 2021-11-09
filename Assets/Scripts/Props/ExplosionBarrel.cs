@@ -45,7 +45,6 @@ public class ExplosionBarrel : MonoBehaviour, IDamagable
         }
         
         HitSpawner spawned = Instantiate(_explosionEffect, transform.position + Vector3.down, Quaternion.identity);
-        spawned.SpawnEffects();
         
         gameObject.SetActive(false);
     }

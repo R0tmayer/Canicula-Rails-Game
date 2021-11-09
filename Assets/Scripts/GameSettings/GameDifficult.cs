@@ -1,43 +1,44 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameDifficult : MonoBehaviour
 {
-    public enum Difficult
-    {
-        Easy,
-        Normal,
-        Hard,
-        Custom
-    }
+    [SerializeField] private Dropdown _dropdown;
 
-    [SerializeField] private Difficult _difficultType;
-    
     [SerializeField] private GameSettingsSO _easyDifficult;
     [SerializeField] private GameSettingsSO _normalDifficult;
     [SerializeField] private GameSettingsSO _hardDifficult;
-    [SerializeField] private GameSettingsSO _customDifficult;
 
     public GameSettingsSO CurrentDifficult { get; private set; }
 
     private void Awake()
     {
-        switch (_difficultType)
+        DontDestroyOnLoad(gameObject);
+        CurrentDifficult = _easyDifficult;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 100;
+    }
+
+    private void OnEnable()
+    {
+        _dropdown.onValueChanged.AddListener(delegate { DropdownValueChanged(_dropdown); });
+    }
+
+    //Ouput the new value of the Dropdown into Text
+    void DropdownValueChanged(Dropdown dropdown)
+    {
+        switch (dropdown.value)
         {
-            case Difficult.Easy:
+            case 0:
                 CurrentDifficult = _easyDifficult;
                 break;
-            case Difficult.Normal:
+            case 1:
                 CurrentDifficult = _normalDifficult;
                 break;
-            case Difficult.Hard:
+            case 2:
                 CurrentDifficult = _hardDifficult;
                 break;
-            case Difficult.Custom:
-                CurrentDifficult = _customDifficult;
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
     }
 }
