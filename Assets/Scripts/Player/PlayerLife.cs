@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLife : MonoBehaviour, IHealable, IDamagable
@@ -28,7 +26,7 @@ public class PlayerLife : MonoBehaviour, IHealable, IDamagable
     
     private void Die()
     {
-        // Debug.LogWarning("YOU DIED! PLAYER HP IS " + _health );
+        Debug.LogWarning("YOU DIED! PLAYER HP IS " + _health);
     }
 
     public void TakeDamage(float damage)

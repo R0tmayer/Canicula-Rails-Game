@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -55,6 +51,7 @@ public class UIManager : MonoBehaviour
 
     private void GameOver()
     {
+        Debug.Log("GameOver");
         ClearUI();
         Time.timeScale = 0;
         _musicAudioSource.Stop();

@@ -35,9 +35,9 @@ RectTransform:
   m_Children:
   - {fileID: 432369334021601360}
   - {fileID: 432369334381344508}
-  - {fileID: 8839846712374578832}
   - {fileID: 3744725916644007941}
   - {fileID: 2096605507846682642}
+  - {fileID: 8839846712374578832}
   - {fileID: 9053262868872791972}
   - {fileID: 4458979724846698897}
   m_Father: {fileID: 0}
@@ -238,6 +238,7 @@ MonoBehaviour:
   _gameOverCanvas: {fileID: 432369334021601363}
   _winGameCanvas: {fileID: 2161974986637419540}
   _musicToggleText: {fileID: 546369291136389654}
+  _sceneLoader: {fileID: 0}
   _musicAudioSource: {fileID: 6599562639427094076}
   _gameOverAudioSource: {fileID: 3818513905349848595}
 --- !u!1 &939899062742495796
@@ -562,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 7426406870923689251, guid: 369cf488b58257d4385786926c4cb671,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7426406870923689251, guid: 369cf488b58257d4385786926c4cb671,
         type: 3}
@@ -800,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 224000014139501146, guid: 89789cb8cba120d4891935be56eb8556,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224000014139501146, guid: 89789cb8cba120d4891935be56eb8556,
         type: 3}
@@ -1506,7 +1507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: abe845077ba98af419342afb07ce7902, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: abe845077ba98af419342afb07ce7902, type: 3}
       propertyPath: m_AnchorMax.x
