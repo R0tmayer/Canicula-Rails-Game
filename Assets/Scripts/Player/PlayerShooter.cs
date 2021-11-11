@@ -40,6 +40,11 @@ public class PlayerShooter : MonoBehaviour
 
     private void ShootRaycast()
     {
+        if (!UIManager.IS_INPUTED)
+        {
+            return;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);

@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour
     private PlayerLife _player;
     private bool _musicOn = true;
 
+    public static bool IS_INPUTED = true;
+    
     private void Start()
     {
         _player = FindObjectOfType<PlayerLife>();
@@ -102,6 +104,7 @@ public class UIManager : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
+        IS_INPUTED = true;
         
         ClearUI();
         _gameCanvas.SetActive(true);
@@ -143,6 +146,7 @@ public class UIManager : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0;
+        IS_INPUTED = false;
         
         ClearUI();
         _pauseUI.SetActive(true);
