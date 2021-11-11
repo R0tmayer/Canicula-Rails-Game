@@ -18,16 +18,16 @@ MonoBehaviour:
   _playerRotateSpeed: 30
   _nextWaypointDelay: 0.5
   _botsStartDelay: 1
-  _botsMaxHealth: 2
-  _botsDamage: 5
+  _botsMaxHealth: 10
+  _botsDamage: 2
   _botsTimeDeactivate: 4
   _rangeMoveSpeed: 15
   _rangeMovePeriod: 0
   _rangeShotPeriod: 3
   _meleeMoveSpeed: 4
   _meleeStopDistance: 2
-  _barrelMaxHealth: 1
-  _barrelDamage: 30
+  _barrelMaxHealth: 5
+  _barrelDamage: 10
   _barrelRadius: 30
   _firstAidKitHeal: 1
   _spawnBotEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}

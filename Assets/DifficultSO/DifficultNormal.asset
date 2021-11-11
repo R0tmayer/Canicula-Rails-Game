@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: DifficultNormal
   m_EditorClassIdentifier: 
   _playerMaxHealth: 15
-  _playerDamage: 5
+  _playerDamage: 8
   _playerMoveSpeed: 3
   _playerRotateSpeed: 30
   _nextWaypointDelay: 0.5
   _botsStartDelay: 1
-  _botsMaxHealth: 20
-  _botsDamage: 5
+  _botsMaxHealth: 15
+  _botsDamage: 3
   _botsTimeDeactivate: 4
   _rangeMoveSpeed: 15
   _rangeMovePeriod: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   _meleeStopDistance: 2
   _barrelMaxHealth: 5
   _barrelDamage: 15
-  _barrelRadius: 5
+  _barrelRadius: 30
   _firstAidKitHeal: 1
   _spawnBotEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
   _dieBotEffect: {fileID: 198194127032045410, guid: 46876a2780737ec45a19d62f88e5ce56,

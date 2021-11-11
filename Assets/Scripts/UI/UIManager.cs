@@ -127,7 +127,7 @@ public class UIManager : MonoBehaviour
     {
         if (_musicOn)
         {
-            _musicAudioSource.Stop();
+            _musicAudioSource.Pause();
             _musicToggleText.text = "MUSIC:OFF";
         }
         else
